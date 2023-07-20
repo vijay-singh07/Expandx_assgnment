@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\StudentController;
 
+/*
+Defining routes for uploading csv file, Dumping its data into database and then displaying it on screen.
+*/
 Route::get('/', [StudentController::class, 'showUploadForm'])->name('csv.upload.form');
 Route::post('/upload', [StudentController::class, 'uploadCSV'])->name('csv.upload');
 Route::get('/students', [StudentController::class, 'index'])->name('students.index');
